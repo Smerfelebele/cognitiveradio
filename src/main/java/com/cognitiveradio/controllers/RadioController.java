@@ -17,10 +17,9 @@ public class RadioController {
     @RequestMapping(value = "/getInformation")
     public String getInformation() {
         List<Information> information = radioService.getInformation();
-        //Gson gson = new Gson();
+        Gson gson = new Gson();
 
-        //return gson.toJson(peoples);
-        return "yes";
+        return gson.toJson(information);
     }
 
 }
